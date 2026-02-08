@@ -4,7 +4,7 @@
     @if($image)
     <div class="absolute inset-0 overflow-hidden">
         <div class="absolute inset-0 bg-[url('{{ $image }}')] bg-cover bg-center opacity-10"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+        <div class="absolute inset-0 bg-linear-to-t from-slate-900 via-transparent to-transparent"></div>
     </div>
     @endif
     <div class="container mx-auto px-6 relative z-10 text-center">

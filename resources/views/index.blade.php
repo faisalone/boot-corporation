@@ -1,18 +1,18 @@
 <x-app-layout title="Home">
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center bg-slate-900">
+    <header class="relative min-h-screen flex items-center bg-slate-900 pt-20 md:pt-0">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                 alt="Team Success" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
+            <div class="absolute inset-0 bg-linear-to-r from-slate-900/90 to-slate-900/40"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-8 animate-fade-in-up">
                 <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">
                     Solutions-Based Support for <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Unleashing
+                        class="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-amber-300">Unleashing
                         Prosperities</span>
                 </h1>
                 <p class="text-lg text-slate-200 leading-relaxed max-w-xl">
@@ -25,7 +25,7 @@
                         class="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-semibold shadow-xl shadow-orange-500/20 hover:-translate-y-1 transition-all text-center">
                         Learn More
                     </a>
-                    <a href="{{ route('services') }}"
+                    <a href="{{ route('service.index') }}"
                         class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-full font-semibold hover:-translate-y-1 transition-all text-center">
                         Our Services
                     </a>
@@ -35,7 +35,7 @@
     </header>
 
     <!-- Values Section -->
-    <section class="py-24 relative z-20 -mt-32">
+    <section class="py-16 md:py-24 bg-slate-50">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
@@ -56,11 +56,11 @@
                     </p>
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-slate-500">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">✓</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">✓</span>
                             Create long-term value
                         </li>
                         <li class="flex items-start gap-3 text-sm text-slate-500">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">✓</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">✓</span>
                             Trusted professional services
                         </li>
                     </ul>
@@ -84,11 +84,11 @@
                     </p>
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-slate-500">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">✓</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">✓</span>
                             Personal connections
                         </li>
                         <li class="flex items-start gap-3 text-sm text-slate-500">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">✓</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">✓</span>
                             Never compromising
                         </li>
                     </ul>
@@ -112,11 +112,11 @@
                     </p>
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-slate-500">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">✓</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">✓</span>
                             Simplify complexity
                         </li>
                         <li class="flex items-start gap-3 text-sm text-slate-500">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">✓</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">✓</span>
                             Build trust & confidence
                         </li>
                     </ul>
@@ -130,7 +130,7 @@
         <div
             class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-fixed bg-center">
         </div>
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/80"></div>
+        <div class="absolute inset-0 bg-linear-to-r from-slate-900 via-slate-900/95 to-slate-900/80"></div>
 
         <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
             <div class="space-y-8">
@@ -183,12 +183,12 @@
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-4xl font-bold text-slate-800 mb-4">Why Choose Us</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-300 mx-auto rounded-full"></div>
+                <div class="w-24 h-1 bg-linear-to-r from-orange-500 to-orange-300 mx-auto rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-x-12 gap-y-12">
                 <div class="flex gap-6 group">
-                    <div class="flex-shrink-0 w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg shadow-orange-500/10">
+                    <div class="shrink-0 w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg shadow-orange-500/10">
                         <span class="text-2xl font-bold">01</span>
                     </div>
                     <div>
@@ -201,7 +201,7 @@
                 </div>
 
                 <div class="flex gap-6 group">
-                    <div class="flex-shrink-0 w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg shadow-orange-500/10">
+                    <div class="shrink-0 w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg shadow-orange-500/10">
                         <span class="text-2xl font-bold">02</span>
                     </div>
                     <div>
@@ -214,7 +214,7 @@
                 </div>
 
                 <div class="flex gap-6 group">
-                    <div class="flex-shrink-0 w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg shadow-orange-500/10">
+                    <div class="shrink-0 w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg shadow-orange-500/10">
                         <span class="text-2xl font-bold">03</span>
                     </div>
                     <div>
@@ -227,7 +227,7 @@
                 </div>
 
                 <div class="flex gap-6 group">
-                    <div class="flex-shrink-0 w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg shadow-orange-500/10">
+                    <div class="shrink-0 w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg shadow-orange-500/10">
                         <span class="text-2xl font-bold">04</span>
                     </div>
                     <div>

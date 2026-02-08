@@ -10,9 +10,14 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/services', function () {
-    return view('services');
-})->name('services');
+Route::group(['prefix' => 'services', 'as' => 'service.'], function () {
+	Route::get('/', fn() => view('services.index'))->name('index');
+	Route::get('/registration', fn() => view('services.registration'))->name('registration');
+	Route::get('/bookkeeping', fn() => view('services.bookkeeping'))->name('bookkeeping');
+	Route::get('/audit', fn() => view('services.audit'))->name('audit');
+	Route::get('/tax', fn() => view('services.tax'))->name('tax');
+	Route::get('/consultancy', fn() => view('services.consultancy'))->name('consultancy');
+});
 
 Route::get('/contact', function () {
     return view('contact');
@@ -25,24 +30,3 @@ Route::get('/gallery', function () {
 Route::get('/publications', function () {
     return view('publications');
 })->name('publications');
-
-// Service Routes
-Route::get('/services/registration', function () {
-    return view('service-registration');
-})->name('service.registration');
-
-Route::get('/services/bookkeeping', function () {
-    return view('service-bookkeeping');
-})->name('service.bookkeeping');
-
-Route::get('/services/audit', function () {
-    return view('service-audit');
-})->name('service.audit');
-
-Route::get('/services/tax', function () {
-    return view('service-tax');
-})->name('service.tax');
-
-Route::get('/services/consultancy', function () {
-    return view('service-consultancy');
-})->name('service.consultancy');

@@ -140,13 +140,13 @@
                 <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
                     <div class="flex flex-col gap-6">
                         <div class="flex flex-col md:flex-row gap-6 md:items-start">
-                             <div class="flex-shrink-0">
+                             <div class="shrink-0">
                                 <div class="w-32 h-32 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
                                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                                     alt="Hanif Ahmed" class="w-full h-full object-cover">
                                 </div>
                              </div>
-                             <div class="flex-grow pt-1">
+                             <div class="grow">
                                 <h3 class="text-3xl font-bold text-slate-900 mb-2">Muhammad Abu Hanif Meah</h3>
                                 <div class="flex flex-wrap items-center gap-3 mb-3">
                                     <span class="text-orange-600 font-bold text-xs tracking-wide uppercase bg-orange-50 px-2 py-1 rounded">Running Partner</span>
@@ -170,7 +170,7 @@
                                 <button onclick="openProfileTab(event, 'h-positions')" class="tab-btn pb-3 text-slate-500 font-medium text-sm border-b-2 border-transparent hover:text-orange-500 transition-all">Key Positions</button>
                                 <button onclick="openProfileTab(event, 'h-industry')" class="tab-btn pb-3 text-slate-500 font-medium text-sm border-b-2 border-transparent hover:text-orange-500 transition-all">Industry Experience</button>
                             </div>
-                            <div class="min-h-[150px]">
+                            <div class="min-h-37.5
                                 <div id="h-qualifications" class="tab-content block animate-fade-in">
                                     <ul class="space-y-3 text-sm text-slate-700">
                                         <li class="flex items-start gap-3"><i class="fa-solid fa-graduation-cap text-orange-500 mt-1"></i><span>Fellow Chartered Accountant (FCA), ICAB (No-1659)</span></li>
@@ -212,7 +212,7 @@
                                 <h4 class="font-bold text-slate-800 text-base uppercase tracking-wide">Professional Experience</h4>
                             </div>
                             <ul class="relative space-y-5">
-                                <div class="absolute left-[7px] top-2 bottom-2 w-0.5 bg-indigo-100"></div>
+                                <div class="absolute left-1.75top-2 bottom-2 w-0.5 bg-indigo-100"></div>
                                 <li class="relative pl-8"><div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-[3px] border-indigo-500 bg-white"></div><p class="text-[15px] text-slate-700 leading-relaxed font-medium">Extensive experience working with regulatory bodies like Bangladesh Bank, BIDA, BEZA, and RJSC.</p></li>
                                 <li class="relative pl-8"><div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-[3px] border-indigo-500 bg-white"></div><p class="text-[15px] text-slate-700 leading-relaxed font-medium">Served in esteemed roles at prominent chartered accountancy and advisory firms in Bangladesh.</p></li>
                                 <li class="relative pl-8"><div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-[3px] border-indigo-500 bg-white"></div><p class="text-[15px] text-slate-700 leading-relaxed font-medium">Successfully led audit and assurance as well as business advisory services for a considerable duration.</p></li>
@@ -228,13 +228,13 @@
                 <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
                     <div class="flex flex-col gap-6">
                         <div class="flex flex-col md:flex-row gap-6 md:items-start">
-                             <div class="flex-shrink-0">
+                             <div class="shrink-0
                                 <div class="w-32 h-32 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
                                     <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                                     alt="Arif Hossain" class="w-full h-full object-cover">
                                 </div>
                              </div>
-                             <div class="flex-grow pt-1">
+                             <div class="grow">
                                 <h3 class="text-3xl font-bold text-slate-900 mb-2">Muhammad Ariful Haque</h3>
                                 <div class="flex flex-wrap items-center gap-3 mb-3">
                                     <span class="text-orange-600 font-bold text-xs tracking-wide uppercase bg-orange-50 px-2 py-1 rounded">Partner</span>
@@ -258,7 +258,7 @@
                                 <button onclick="openProfileTab(event, 'a-positions')" class="tab-btn pb-3 text-slate-500 font-medium text-sm border-b-2 border-transparent hover:text-orange-500 transition-all">Key Positions</button>
                                 <button onclick="openProfileTab(event, 'a-industry')" class="tab-btn pb-3 text-slate-500 font-medium text-sm border-b-2 border-transparent hover:text-orange-500 transition-all">Industry Experience</button>
                             </div>
-                            <div class="min-h-[150px]">
+                            <div class="min-h-37.5
                                 <div id="a-qualifications" class="tab-content block animate-fade-in">
                                     <ul class="space-y-3 text-sm text-slate-700">
                                         <li class="flex items-start gap-3"><i class="fa-solid fa-graduation-cap text-orange-500 mt-1"></i><span>Fellow Chartered Accountant (FCA), ICAB</span></li>
@@ -297,7 +297,7 @@
                                 <h4 class="font-bold text-slate-800 text-base uppercase tracking-wide">Professional Experience</h4>
                             </div>
                             <ul class="relative space-y-5">
-                                <div class="absolute left-[7px] top-2 bottom-2 w-0.5 bg-indigo-100"></div>
+                                <div class="absolute left-1.75 top-2 bottom-2 w-0.5 bg-indigo-100"></div>
                                 <li class="relative pl-8"><div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-[3px] border-indigo-500 bg-white"></div><p class="text-[15px] text-slate-700 leading-relaxed font-medium">Specializes in information systems audit, business process re-engineering, and foreign direct investment (FDI).</p></li>
                                 <li class="relative pl-8"><div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-[3px] border-indigo-500 bg-white"></div><p class="text-[15px] text-slate-700 leading-relaxed font-medium">Leading major FDI projects in energy and textile sectors, facilitating large-scale investments.</p></li>
                                 <li class="relative pl-8"><div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-[3px] border-indigo-500 bg-white"></div><p class="text-[15px] text-slate-700 leading-relaxed font-medium">Deep understanding of the RMG sector providing specialized consultancy for unique industry challenges.</p></li>

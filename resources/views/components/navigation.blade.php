@@ -21,7 +21,7 @@
                 class="{{ request()->routeIs('about') ? 'text-orange-600' : 'hover:text-orange-500' }} transition-colors">About</a>
 
             <div class="relative group h-full flex items-center">
-                <a href="{{ route('services') }}"
+                <a href="{{ route('service.index') }}"
                     class="{{ request()->routeIs('services') || request()->routeIs('service.*') ? 'text-orange-600' : 'hover:text-orange-500' }} transition-colors flex items-center gap-1 py-4">
                     Services <i class="fa-solid fa-chevron-down text-xs"></i>
                 </a>
@@ -105,7 +105,7 @@
             <a href="{{ route('contact') }}"
                 class="{{ request()->routeIs('contact') ? 'text-orange-600' : 'hover:text-orange-500' }} transition-colors">Contact</a>
             <a href="{{ route('contact') }}"
-                class="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all text-sm font-semibold">
+                class="px-6 py-2.5 bg-linear-to-r from-orange-500 to-orange-600 text-white rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all text-sm font-semibold">
                 Request Consultation
             </a>
         </div>
@@ -183,7 +183,7 @@
             <a href="{{ route('contact') }}"
                 class="px-4 py-3 {{ request()->routeIs('contact') ? 'bg-orange-50 text-orange-600' : 'hover:bg-orange-50 hover:text-orange-600 text-slate-600' }} rounded-lg font-medium transition-colors">Contact</a>
             <a href="{{ route('contact') }}"
-                class="mt-4 w-full text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all font-semibold">
+                class="mt-4 w-full text-center px-6 py-3 bg-linear-to-r from-orange-500 to-orange-600 text-white rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all font-semibold">
                 Request Consultation
             </a>
         </div>

@@ -17,7 +17,7 @@
                     <div class="relative h-64">
                         <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80"
                             alt="Bookkeeping" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end"></div>
+                        <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 to-transparent flex items-end"></div>
                     </div>
                     <div class="p-8">
                         <h2 class="text-3xl font-bold text-slate-800 mb-6">Bookkeeping & Payroll</h2>

@@ -51,10 +51,10 @@
                     Resources <i class="fa-solid fa-chevron-down text-xs"></i>
                 </a>
                 <div
-                    class="dropdown-content absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden z-50">
+                    class="dropdown-content absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-slate-100 overflow-visible z-50">
                     <div class="relative group/sub">
                         <a href="#"
-                            class="flex px-4 py-3 hover:bg-orange-50 hover:text-orange-600 transition-colors border-b border-slate-50 justify-between items-center">
+                            class="flex px-4 py-3 hover:bg-orange-50 hover:text-orange-600 transition-colors border-b border-slate-50 justify-between items-center rounded-t-xl">
                             <span><i class="fa-solid fa-link mr-2 text-xs"></i> Useful Links</span>
                             <i class="fa-solid fa-chevron-right text-xs"></i>
                         </a>
@@ -158,25 +158,37 @@
                     Resources <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
                 </button>
                 <div class="hidden pl-4 space-y-1 bg-slate-50 rounded-lg mt-1">
+                    <!-- Mobile Useful Links Dropdown -->
+                    <div>
+                        <button
+                            class="mobile-sub-dropdown-toggle w-full px-4 py-2 text-sm text-slate-600 hover:text-orange-600 flex justify-between items-center text-left">
+                            Useful Links <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden pl-4 space-y-1 mt-1">
+                            <a href="https://www.icab.org.bd/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">ICAB</a>
+                            <a href="https://nbr.gov.bd/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">NBR</a>
+                            <a href="http://bida.gov.bd/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">BIDA</a>
+                            <a href="https://www.bepza.gov.bd/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">BEPZA</a>
+                            <a href="https://www.beza.gov.bd/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">BEZA</a>
+                            <a href="https://www.bb.org.bd/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">Bangladesh Bank</a>
+                            <a href="http://www.roc.gov.bd/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">RJSC</a>
+                            <a href="https://thefinancialexpress.com.bd/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">The Financial Express</a>
+                            <a href="https://www.thedailystar.net/" target="_blank"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">The Daily Star</a>
+                        </div>
+                    </div>
                     <a href="{{ route('gallery') }}"
                         class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">Photo Gallery</a>
                     <a href="{{ route('publications') }}"
                         class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">Publications</a>
-                    <div class="px-4 py-2 text-xs font-bold text-slate-400 uppercase mt-2">Useful Links</div>
-                    <a href="https://www.icab.org.bd/" target="_blank"
-                        class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">ICAB</a>
-                    <a href="https://nbr.gov.bd/" target="_blank"
-                        class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">NBR</a>
-                    <a href="http://bida.gov.bd/" target="_blank"
-                        class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">BIDA</a>
-                    <a href="https://www.bepza.gov.bd/" target="_blank"
-                        class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">BEPZA</a>
-                    <a href="https://www.beza.gov.bd/" target="_blank"
-                        class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">BEZA</a>
-                    <a href="https://www.bb.org.bd/" target="_blank"
-                        class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">Bangladesh Bank</a>
-                    <a href="http://www.roc.gov.bd/" target="_blank"
-                        class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">RJSC</a>
                 </div>
             </div>
 

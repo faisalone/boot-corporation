@@ -39,4 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Mobile Sub-Dropdowns functionality (for nested menus)
+    const mobileSubDropdownToggles = document.querySelectorAll('.mobile-sub-dropdown-toggle');
+
+    mobileSubDropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const dropdown = toggle.nextElementSibling;
+            const icon = toggle.querySelector('.fa-chevron-down');
+
+            if (dropdown) {
+                dropdown.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
+            }
+        });
+    });
 });

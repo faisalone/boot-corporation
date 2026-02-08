@@ -8,7 +8,7 @@
             <div class="absolute inset-0 bg-linear-to-r from-slate-900/90 to-slate-900/40"></div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center pb-16 md:pb-0">
             <div class="space-y-8 animate-fade-in-up">
                 <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">
                     Solutions-Based Support for <span
@@ -17,8 +17,7 @@
                 </h1>
                 <p class="text-lg text-slate-200 leading-relaxed max-w-xl">
                     At the core of our philosophy lies a commitment to providing strategic financial solutions that
-                    extend beyond conventional services. Whether you are navigating complex tax structures or requiring
-                    insightful financial consulting, we are your unwavering partner.
+                    extend beyond conventional services.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="{{ route('about') }}"

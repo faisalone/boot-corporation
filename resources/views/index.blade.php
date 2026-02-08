@@ -10,10 +10,9 @@
 
         <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center pb-16 md:pb-0">
             <div class="space-y-8 animate-fade-in-up">
-                <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">
-                    Solutions-Based Support for <span
-                        class="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-amber-300">Unleashing
-                        Prosperities</span>
+                <h1 class="text-3xl md:text-6xl font-bold text-white leading-tight">
+                    <span class="text-xl md:text-4xl font-medium block mb-2">Solutions-Based Support for</span>
+                    <span class="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-amber-300">Unleashing Prosperities</span>
                 </h1>
                 <p class="text-lg text-slate-200 leading-relaxed max-w-xl">
                     At the core of our philosophy lies a commitment to providing strategic financial solutions that

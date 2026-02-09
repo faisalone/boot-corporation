@@ -1,17 +1,8 @@
 <!-- Navigation -->
-<nav class="fixed w-full z-50 transition-all duration-300 glass border-b border-white/20">
+<nav class="fixed w-full z-50 transition-all duration-300 border-b border-white/20" style="background-color: #cee9c0;">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="{{ route('index') }}" class="flex items-center gap-3 group">
-            <div
-                class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center text-white font-black text-xl shadow-lg group-hover:rotate-3 transition-transform duration-300 ring-2 ring-orange-500/20">
-                B</div>
-            <div class="flex flex-col">
-                <span
-                    class="text-xl font-black tracking-tighter text-slate-900 group-hover:text-orange-600 transition-colors uppercase">BOOT
-                    CORPORATION</span>
-                <span class="text-[0.65rem] font-bold text-slate-500 tracking-[0.2em] uppercase">Chartered
-                    Accountants</span>
-            </div>
+            <img src="{{ asset('jv-logo.png') }}" alt="boot-corporation" class="h-14 md:h-16 w-auto object-contain">
         </a>
 
         <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
@@ -102,10 +93,13 @@
                 </div>
             </div>
 
+            <a href="{{ route('schedule-of-rate') }}"
+                class="{{ request()->routeIs('schedule-of-rate') ? 'text-orange-600' : 'hover:text-orange-500' }} transition-colors">Schedule of Rate</a>
+
             <a href="{{ route('contact') }}"
                 class="{{ request()->routeIs('contact') ? 'text-orange-600' : 'hover:text-orange-500' }} transition-colors">Contact</a>
             <a href="{{ route('contact') }}"
-                class="px-6 py-2.5 bg-linear-to-r from-orange-500 to-orange-600 text-white rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all text-sm font-semibold">
+                class="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all text-sm font-semibold">
                 Request Consultation
             </a>
         </div>
@@ -191,6 +185,11 @@
                         class="block px-4 py-2 text-sm text-slate-600 hover:text-orange-600">Publications</a>
                 </div>
             </div>
+
+            <a href="{{ route('schedule-of-rate') }}"
+                class="block px-6 py-3 hover:bg-orange-50 hover:text-orange-600 transition-colors border-b border-slate-100 {{ request()->routeIs('schedule-of-rate') ? 'bg-orange-50 text-orange-600 font-semibold' : '' }}">
+                <i class="fa-solid fa-file-invoice-dollar mr-2 text-xs"></i> Schedule of Rate
+            </a>
 
             <a href="{{ route('contact') }}"
                 class="px-4 py-3 {{ request()->routeIs('contact') ? 'bg-orange-50 text-orange-600' : 'hover:bg-orange-50 hover:text-orange-600 text-slate-600' }} rounded-lg font-medium transition-colors">Contact</a>

@@ -22,8 +22,7 @@
                                 </svg>
                             </div>
                             <h3 class="font-bold text-slate-800 mb-2">Phone</h3>
-                            <p class="text-slate-600">+880 2 48814429</p>
-                            <p class="text-slate-600">+880 1711 535 555</p>
+                            <p class="text-slate-600">+880 xxxx-xxxxxx</p>
                         </div>
                         <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
                             <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4">
@@ -33,8 +32,7 @@
                                 </svg>
                             </div>
                             <h3 class="font-bold text-slate-800 mb-2">Email</h3>
-                            <p class="text-slate-600">info@bootcorporation.com.bd</p>
-                            <p class="text-slate-600">hanif@bootcorporation.com.bd</p>
+                            <p class="text-slate-600">bootcorporation3@gmail.com</p>
                         </div>
                     </div>
 
@@ -50,8 +48,7 @@
                             <div>
                                 <h3 class="font-bold text-slate-800 mb-2">Location</h3>
                                 <p class="text-slate-600 leading-relaxed">
-                                    Flat - D1 (1st floor) House - 35, Road - 114<br>
-                                    Gulshan - 2, Dhaka - 1212, Bangladesh
+                                    
                                 </p>
                             </div>
                         </div>
@@ -95,7 +92,7 @@
                             <div class="relative">
                                 <input type="text" id="subject" name="subject"
                                     class="peer w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all placeholder-transparent"
-                                    placeholder="Subject">
+                                    placeholder="Subject" value="{{ request()->get('service') ? 'Quote Request: ' . request()->get('service') : '' }}">
                                 <label for="subject"
                                     class="absolute left-4 -top-2.5 bg-white px-1 text-sm text-slate-500 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-orange-500">Subject</label>
                             </div>

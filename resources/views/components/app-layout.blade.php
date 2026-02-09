@@ -19,7 +19,7 @@
 
     <x-footer />
 
-    <script src="{{ asset('js/script.js') }}"></script>
+    @vite(['resources/js/app.js'])
     {{ $scripts ?? '' }}
 </body>
 

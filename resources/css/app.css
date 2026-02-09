@@ -10,6 +10,14 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+.hero-slide {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+.hero-slide.active {
+	opacity: 1;
+}
+
 /* Glass Effect */
 .glass {
     background: rgba(255, 255, 255, 0.9);

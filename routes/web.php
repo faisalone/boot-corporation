@@ -89,5 +89,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('photos',       Admin\PhotoController::class)->except('show');
         Route::resource('publications', Admin\PublicationController::class)->except('show');
         Route::resource('menus',        Admin\MenuController::class)->except('show');
+        // Route::resource('users', Admin\UserController::class)->except('show'); // Reserved for future
+
+        // Profile
+        Route::get('profile', [Admin\ProfileController::class, 'edit'])->name('profile.edit');
+        Route::put('profile', [Admin\ProfileController::class, 'update'])->name('profile.update');
     });
 });

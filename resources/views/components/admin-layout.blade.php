@@ -77,6 +77,13 @@
                    class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600 transition {{ request()->routeIs('admin.menus.*') ? 'active' : '' }}">
                     <i class="fa-solid fa-bars w-5 text-center text-xs"></i> Menu Items
                 </a>
+
+                <p class="px-3 pt-5 pb-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">System</p>
+
+                <a href="{{ route('admin.profile.edit') }}"
+                   class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600 transition {{ request()->routeIs('admin.profile.*') ? 'active' : '' }}">
+                    <i class="fa-solid fa-user-circle w-5 text-center text-xs"></i> My Profile
+                </a>
             </nav>
 
             <div class="border-t border-slate-100 px-3 py-3 space-y-1">

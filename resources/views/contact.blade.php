@@ -58,11 +58,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden relative">
-                            <iframe
-                                src="{{ isset($site) && $site->map_embed_url ? $site->map_embed_url : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.605630630733!2d90.41999931536306!3d23.79155548456913' }}"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
+
                     </div>
                 </div>
 

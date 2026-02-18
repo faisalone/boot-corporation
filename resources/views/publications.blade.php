@@ -33,7 +33,7 @@
                         </span>
                         @if($pub->file)
                         <a href="{{ asset('storage/' . $pub->file) }}" target="_blank" class="px-6 py-2 rounded-full border border-orange-500 text-orange-600 font-medium hover:bg-orange-50 transition-colors text-sm">
-                            <i class="fa-solid fa-download mr-2"></i> {{ __('Download') }}
+                            <i class="fa-regular fa-eye mr-2"></i> {{ __('View Publication') }}
                         </a>
                         @endif
                     </div>

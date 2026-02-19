@@ -1,8 +1,8 @@
-<x-app-layout title="Photo Gallery">
+<x-app-layout :title="$page ? t($page, 'title') : __('Photo Gallery')">
 
     <x-page-header
-        :title="__('Photo Gallery')"
-        :subtitle="__('Glimpses of our life at BOOT CORPORATION, events, and community engagements.')"
+        :title="$page ? t($page, 'title') : __('Photo Gallery')"
+        :subtitle="$page ? t($page, 'summary') : __('Glimpses of our life at BOOT CORPORATION, events, and community engagements.')"
     />
 
     <!-- Gallery Grid -->

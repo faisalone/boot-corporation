@@ -1,8 +1,8 @@
-<x-app-layout title="Our Services">
+<x-app-layout :title="$page ? t($page, 'title') : __('Our Services')">
 
     <x-page-header
-        :title="__('Our Services')"
-        :subtitle="__('Comprehensive financial solutions designed to help your business thrive.')"
+        :title="$page ? t($page, 'title') : __('Our Services')"
+        :subtitle="$page ? t($page, 'summary') : __('Comprehensive financial solutions designed to help your business thrive.')"
     />
 
     <!-- Content Split -->

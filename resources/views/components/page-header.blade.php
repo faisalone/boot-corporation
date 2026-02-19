@@ -10,7 +10,7 @@
     <div class="container mx-auto px-6 relative z-10 text-center">
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">{{ $title }}</h1>
         @if($subtitle)
-        <p class="text-lg text-slate-300 max-w-2xl mx-auto">{{ $subtitle }}</p>
+        <p class="text-lg text-slate-300 mx-auto">{{ $subtitle }}</p>
         @endif
     </div>
 </header>

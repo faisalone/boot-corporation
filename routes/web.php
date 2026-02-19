@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin;
 use App\Models\Partner;
+use App\Models\Page;
 use App\Models\Photo;
 use App\Models\Publication;
 use App\Models\Service;
@@ -24,14 +25,26 @@ Route::get('/', function () {
 })->name('index');
 
 Route::get('/about', function () {
+    $page = Page::query()
+        ->where('slug', request()->path())
+        ->where('is_active', true)
+        ->first();
+
     return view('about', [
+        'page' => $page,
         'partners' => Partner::where('is_active', true)->orderBy('order')->get(),
     ]);
 })->name('about');
 
 Route::group(['prefix' => 'services', 'as' => 'service.'], function () {
 	Route::get('/', function () {
+        $page = Page::query()
+            ->where('slug', request()->path())
+            ->where('is_active', true)
+            ->first();
+
 		return view('services.index', [
+            'page' => $page,
 			'services' => Service::where('is_active', true)->orderBy('order')->get(),
 		]);
 	})->name('index');
@@ -42,23 +55,45 @@ Route::group(['prefix' => 'services', 'as' => 'service.'], function () {
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    $page = Page::query()
+        ->where('slug', request()->path())
+        ->where('is_active', true)
+        ->first();
+
+    return view('contact', compact('page'));
 })->name('contact');
 
 Route::get('/gallery', function () {
+    $page = Page::query()
+        ->where('slug', request()->path())
+        ->where('is_active', true)
+        ->first();
+
     return view('gallery', [
+        'page' => $page,
         'photos' => Photo::where('is_active', true)->orderBy('order')->get(),
     ]);
 })->name('gallery');
 
 Route::get('/publications', function () {
+    $page = Page::query()
+        ->where('slug', request()->path())
+        ->where('is_active', true)
+        ->first();
+
     return view('publications', [
+        'page' => $page,
         'publications' => Publication::where('is_active', true)->orderBy('order')->get(),
     ]);
 })->name('publications');
 
 Route::get('/schedule-of-rate', function () {
-    return view('schedule-of-rate');
+    $page = Page::query()
+        ->where('slug', request()->path())
+        ->where('is_active', true)
+        ->first();
+
+    return view('schedule-of-rate', compact('page'));
 })->name('schedule-of-rate');
 
 // ─── Admin Routes ───────────────────────────────────────────────────

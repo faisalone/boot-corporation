@@ -1,9 +1,9 @@
-<x-app-layout title="About Us">
+<x-app-layout :title="$page ? t($page, 'title') : __('About Us')">
 
     <!-- Page Header -->
     <x-page-header
-        :title="__('About Us')"
-        :subtitle="__('We are dedicated to fostering relationships, building personal connections, and delivering uncompromising excellence.')"
+        :title="$page ? t($page, 'title') : __('About Us')"
+        :subtitle="$page ? t($page, 'summary') : ''"
         image="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80"
     />
 

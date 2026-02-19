@@ -1,8 +1,8 @@
-<x-app-layout title="Schedule of Rate">
+<x-app-layout :title="$page ? t($page, 'title') : __('Schedule of Rate')">
 
     <x-page-header
-        :title="__('Schedule of Rate')"
-        :subtitle="__('Transparent pricing for our professional services')"
+        :title="$page ? t($page, 'title') : __('Schedule of Rate')"
+        :subtitle="$page ? t($page, 'summary') : __('Transparent pricing for our professional services')"
         image="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
     />
 

@@ -1,8 +1,8 @@
-<x-app-layout title="Publications">
+<x-app-layout :title="$page ? t($page, 'title') : __('Publications')">
 
     <x-page-header
-        :title="__('Publications')"
-        :subtitle="__('Insights, updates, and thought leadership on tax, audit, and business advisory.')"
+        :title="$page ? t($page, 'title') : __('Publications')"
+        :subtitle="$page ? t($page, 'summary') : __('Insights, updates, and thought leadership on tax, audit, and business advisory.')"
         image="https://images.unsplash.com/photo-1513475303663-5246c545422b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
     />
 

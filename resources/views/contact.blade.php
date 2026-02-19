@@ -1,8 +1,8 @@
-<x-app-layout title="Contact Us">
+<x-app-layout :title="$page ? t($page, 'title') : __('Contact Us')">
 
     <x-page-header
-        :title="__('Contact Us')"
-        :subtitle="__('Ready to take your business to the next level? Get in touch with us today.')"
+        :title="$page ? t($page, 'title') : __('Contact Us')"
+        :subtitle="$page ? t($page, 'summary') : __('Ready to take your business to the next level? Get in touch with us today.')"
         image="https://images.unsplash.com/photo-1423666639041-f140481d836a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80"
     />
 

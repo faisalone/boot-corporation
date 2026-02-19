@@ -20,18 +20,25 @@
                                     @include('admin.settings.partials.json-editor', ['setting' => $setting])
                                 
                                 @elseif($setting->type === 'image' || $setting->type === 'file')
-                                    <div class="flex items-center gap-4">
-                                        @if($setting->value_en)
-                                            @if($setting->type === 'image')
-                                                <img src="{{ asset('storage/' . $setting->value_en) }}" class="w-16 h-16 object-cover rounded-lg border">
-                                            @else
-                                                <a href="{{ asset('storage/' . $setting->value_en) }}" target="_blank" class="text-sm text-orange-600 underline">
-                                                    <i class="fa-solid fa-file-pdf mr-1"></i> View current file
-                                                </a>
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center gap-4">
+                                            @if($setting->value_en)
+                                                @if($setting->type === 'image')
+                                                    <img src="{{ asset('storage/' . $setting->value_en) }}" class="w-16 h-16 object-cover rounded-lg border">
+                                                @else
+                                                    <a href="{{ asset('storage/' . $setting->value_en) }}" target="_blank" class="text-sm text-orange-600 underline">
+                                                        <i class="fa-solid fa-file-pdf mr-1"></i> View current file
+                                                    </a>
+                                                @endif
                                             @endif
+                                            <input type="file" name="settings[{{ $setting->key }}]"
+                                                class="text-sm text-slate-600 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200">
+                                        </div>
+                                        @if($setting->value_en)
+                                            <button type="button" onclick="deleteFile('{{ route('admin.settings.file.destroy', $setting->key) }}')" class="text-xs text-red-500 hover:text-red-700 flex items-center">
+                                                <i class="fa-solid fa-trash mr-1"></i> Delete current file
+                                            </button>
                                         @endif
-                                        <input type="file" name="settings[{{ $setting->key }}]"
-                                            class="text-sm text-slate-600 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200">
                                     </div>
                                 @elseif($setting->type === 'textarea' || $setting->type === 'editor')
                                     {{-- Language tabs --}}
@@ -103,6 +110,11 @@
         </div>
     </form>
 
+    <form id="delete-file-form" method="POST" class="hidden">
+        @csrf
+        @method('DELETE')
+    </form>
+
     <script>
         function switchTab(btn, lang) {
             const container = btn.closest('.rounded-lg') || btn.closest('.border');
@@ -115,6 +127,14 @@
             container.querySelectorAll('.lang-panel').forEach(p => {
                 p.classList.toggle('hidden', p.dataset.lang !== lang);
             });
+        }
+
+        function deleteFile(url) {
+            if(confirm('Are you sure you want to delete this file? This action cannot be undone.')) {
+                const form = document.getElementById('delete-file-form');
+                form.action = url;
+                form.submit();
+            }
         }
     </script>
 

@@ -78,6 +78,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Site Settings
         Route::get('settings', [Admin\SettingController::class, 'index'])->name('settings.index');
         Route::put('settings', [Admin\SettingController::class, 'update'])->name('settings.update');
+        Route::delete('settings/{key}/file', [Admin\SettingController::class, 'destroyFile'])->name('settings.file.destroy');
         Route::get('settings/about', [Admin\SettingController::class, 'about'])->name('settings.about');
         Route::put('settings/about', [Admin\SettingController::class, 'updateAbout'])->name('settings.about.update');
 

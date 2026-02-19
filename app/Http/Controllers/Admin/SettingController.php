@@ -68,4 +68,17 @@ class SettingController extends Controller
 
         return back()->with('success', 'Settings saved successfully.');
     }
+
+    public function destroyFile($key)
+    {
+        $setting = Setting::where('key', $key)->firstOrFail();
+
+        if ($setting->value_en && Storage::disk('public')->exists($setting->value_en)) {
+            Storage::disk('public')->delete($setting->value_en);
+        }
+
+        $setting->update(['value_en' => null]);
+
+        return back()->with('success', 'File deleted successfully.');
+    }
 }

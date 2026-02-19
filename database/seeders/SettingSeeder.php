@@ -15,6 +15,16 @@ class SettingSeeder extends Seeder
             ['key' => 'company_tagline', 'group' => 'general', 'label' => 'Tagline',         'type' => 'text',     'value_en' => 'Chartered Accountants',      'value_bn' => 'চার্টার্ড অ্যাকাউন্ট্যান্ট', 'value_cn' => '特许会计师',             'order' => 2],
             ['key' => 'logo_image',      'group' => 'general', 'label' => 'Logo Image',      'type' => 'image',    'value_en' => '',  'value_bn' => '', 'value_cn' => '', 'order' => 3],
             ['key' => 'favicon',         'group' => 'general', 'label' => 'Favicon',         'type' => 'image',    'value_en' => '',  'value_bn' => '', 'value_cn' => '', 'order' => 4],
+            ['key' => 'site_preview',    'group' => 'general', 'label' => 'Site Preview Image', 'type' => 'image',  'value_en' => '',  'value_bn' => '', 'value_cn' => '', 'order' => 5],
+
+            // ── SEO & Meta (Site-wide) ─────────────────
+            ['key' => 'meta_title',       'group' => 'seo', 'label' => 'Meta Title (Default)',       'type' => 'text',     'value_en' => 'BOOT CORPORATION', 'value_bn' => 'বুট কর্পোরেশন', 'value_cn' => 'BOOT公司', 'order' => 1],
+            ['key' => 'meta_description', 'group' => 'seo', 'label' => 'Meta Description (Default)', 'type' => 'textarea', 'value_en' => 'Chartered Accountants', 'value_bn' => 'চার্টার্ড অ্যাকাউন্ট্যান্ট', 'value_cn' => '特许会计师', 'order' => 2],
+            ['key' => 'meta_keywords',    'group' => 'seo', 'label' => 'Meta Keywords',              'type' => 'text',     'value_en' => '', 'value_bn' => '', 'value_cn' => '', 'order' => 3],
+            ['key' => 'og_image',         'group' => 'seo', 'label' => 'OG Image (Default)',         'type' => 'image',    'value_en' => '', 'value_bn' => '', 'value_cn' => '', 'order' => 4],
+            ['key' => 'og_type',          'group' => 'seo', 'label' => 'OG Type',                    'type' => 'text',     'value_en' => 'website', 'value_bn' => 'website', 'value_cn' => 'website', 'order' => 5],
+            ['key' => 'twitter_card',     'group' => 'seo', 'label' => 'Twitter Card',              'type' => 'text',     'value_en' => 'summary_large_image', 'value_bn' => 'summary_large_image', 'value_cn' => 'summary_large_image', 'order' => 6],
+            ['key' => 'twitter_image',    'group' => 'seo', 'label' => 'Twitter Image (Default)',    'type' => 'image',    'value_en' => '', 'value_bn' => '', 'value_cn' => '', 'order' => 7],
 
             // ── Hero Section ─────────────────────────────
             ['key' => 'hero_title',      'group' => 'hero', 'label' => 'Hero Title',         'type' => 'text',     'value_en' => 'Your Trusted Partner',       'value_bn' => 'আপনার বিশ্বস্ত অংশীদার',       'value_cn' => '您值得信赖的合作伙伴',   'order' => 1],
@@ -60,7 +70,7 @@ class SettingSeeder extends Seeder
         ];
 
         foreach ($settings as $setting) {
-            Setting::updateOrCreate(
+            Setting::firstOrCreate(
                 ['key' => $setting['key']],
                 $setting
             );

@@ -1,12 +1,38 @@
 <x-admin-layout title="Site Settings" header="Site Settings">
 
+    @php
+        $firstGroupKey = null;
+        foreach ($groups as $groupKey => $groupLabel) {
+            if (isset($settings[$groupKey])) {
+                $firstGroupKey = $groupKey;
+                break;
+            }
+        }
+    @endphp
+
+    <div class="bg-white rounded-xl border border-slate-200 p-4 mb-6">
+        <div class="flex flex-wrap gap-2">
+            @foreach($groups as $groupKey => $groupLabel)
+                @if(isset($settings[$groupKey]))
+                    <button
+                        type="button"
+                        id="tab-{{ $groupKey }}"
+                        onclick="selectSettingsTab('{{ $groupKey }}')"
+                        class="px-3 py-1.5 rounded-full text-xs font-semibold border transition {{ $groupKey === $firstGroupKey ? 'border-orange-200 bg-orange-50 text-orange-700' : 'border-slate-200 bg-slate-50 text-slate-600 hover:text-orange-600 hover:border-orange-200 hover:bg-orange-50' }}">
+                        {{ $groupLabel }}
+                    </button>
+                @endif
+            @endforeach
+        </div>
+    </div>
+
     <form method="POST" action="{{ route('admin.settings.update') }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
         @foreach($groups as $groupKey => $groupLabel)
             @if(isset($settings[$groupKey]))
-                <div class="bg-white rounded-xl border border-slate-200 p-6 mb-6">
+                <div id="panel-{{ $groupKey }}" class="settings-panel bg-white rounded-xl border border-slate-200 p-6 mb-6 {{ $groupKey === $firstGroupKey ? '' : 'hidden' }}">
                     <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-5 pb-3 border-b border-slate-100">
                         <i class="fa-solid fa-folder-open text-orange-500 mr-2"></i> {{ $groupLabel }}
                     </h3>
@@ -20,11 +46,17 @@
                                     @include('admin.settings.partials.json-editor', ['setting' => $setting])
                                 
                                 @elseif($setting->type === 'image' || $setting->type === 'file')
+                                    @php
+                                        $isFavicon = $setting->key === 'favicon';
+                                        $isSitePreview = $setting->key === 'site_preview';
+                                        $previewClass = $isFavicon ? 'w-10 h-10' : ($isSitePreview ? 'w-48 h-28' : 'w-16 h-16');
+                                    @endphp
                                     <div class="flex flex-col gap-2">
                                         <div class="flex items-center gap-4">
                                             @if($setting->value_en)
                                                 @if($setting->type === 'image')
-                                                    <img src="{{ asset('storage/' . $setting->value_en) }}" class="w-16 h-16 object-cover rounded-lg border">
+                                                    <img src="{{ img_url($setting->value_en) }}"
+                                                        class="{{ $previewClass }} object-contain rounded-lg border bg-slate-50 p-1">
                                                 @else
                                                     <a href="{{ asset('storage/' . $setting->value_en) }}" target="_blank" class="text-sm text-orange-600 underline">
                                                         <i class="fa-solid fa-file-pdf mr-1"></i> View current file
@@ -134,6 +166,25 @@
                 const form = document.getElementById('delete-file-form');
                 form.action = url;
                 form.submit();
+            }
+        }
+
+        function selectSettingsTab(groupKey) {
+            document.querySelectorAll('.settings-panel').forEach(panel => {
+                panel.classList.toggle('hidden', panel.id !== 'panel-' + groupKey);
+            });
+
+            const base = 'px-3 py-1.5 rounded-full text-xs font-semibold border transition';
+            const active = base + ' border-orange-200 bg-orange-50 text-orange-700';
+            const inactive = base + ' border-slate-200 bg-slate-50 text-slate-600 hover:text-orange-600 hover:border-orange-200 hover:bg-orange-50';
+
+            document.querySelectorAll('[id^="tab-"]').forEach(tab => {
+                tab.className = inactive;
+            });
+
+            const activeTab = document.getElementById('tab-' + groupKey);
+            if(activeTab) {
+                activeTab.className = active;
             }
         }
     </script>

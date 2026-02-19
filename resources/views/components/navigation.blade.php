@@ -3,7 +3,9 @@
 <nav class="fixed w-full z-50 transition-all duration-300 border-b border-white/20" style="background-color: #cee9c0;">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="{{ route('index') }}" class="flex items-center gap-3 group">
-            <img src="{{ asset('jv-logo.png') }}" alt="boot-corporation" class="h-14 md:h-16 w-auto object-contain">
+            <img src="{{ (isset($site) && $site->logo_image) ? img_url($site->logo_image) : asset('jv-logo.png') }}"
+                alt="{{ isset($site) && $site->company_name ? $site->company_name : 'BOOT CORPORATION' }}"
+                class="h-14 md:h-16 w-auto object-contain">
         </a>
 
         <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">

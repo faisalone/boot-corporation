@@ -5,7 +5,9 @@
             <!-- Brand -->
             <div class="space-y-6">
                 <a href="{{ route('index') }}" class="inline-flex items-center gap-2 bg-white p-3 rounded-xl shadow-lg">
-                    <img src="{{ asset('jv-logo.png') }}" alt="boot-corporation" class="h-12 md:h-14 w-auto object-contain">
+                    <img src="{{ (isset($site) && $site->logo_image) ? img_url($site->logo_image) : asset('jv-logo.png') }}"
+                        alt="{{ isset($site) && $site->company_name ? $site->company_name : 'BOOT CORPORATION' }}"
+                        class="h-12 md:h-14 w-auto object-contain">
                 </a>
                 @if(isset($site))
                 <p class="text-sm text-slate-400 leading-relaxed">{{ $site->footer_description }}</p>

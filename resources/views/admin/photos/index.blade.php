@@ -19,11 +19,17 @@
                 <div class="p-3">
                     <p class="text-sm font-medium text-slate-800 truncate">{{ $photo->title_en ?: 'Untitled' }}</p>
                     <p class="text-xs text-slate-400">Order: {{ $photo->order }}</p>
-                    <div class="flex gap-2 mt-2">
-                        <a href="{{ route('admin.photos.edit', $photo) }}" class="text-xs text-orange-600 hover:underline">Edit</a>
-                        <form method="POST" action="{{ route('admin.photos.destroy', $photo) }}" class="inline" onsubmit="return confirm('Delete this photo?')">
+                    <div class="flex items-center justify-end gap-2 mt-3">
+                        <a href="{{ route('admin.photos.edit', $photo) }}"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 transition">
+                            <i class="fa-solid fa-pen-to-square text-orange-600"></i> Edit
+                        </a>
+                        <form method="POST" action="{{ route('admin.photos.destroy', $photo) }}" class="inline-flex" onsubmit="return confirm('Delete this photo?')">
                             @csrf @method('DELETE')
-                            <button class="text-xs text-red-500 hover:underline">Delete</button>
+                            <button type="submit"
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border border-red-200 bg-red-50 text-red-700 hover:bg-red-100 transition">
+                                <i class="fa-solid fa-trash"></i> Delete
+                            </button>
                         </form>
                     </div>
                 </div>

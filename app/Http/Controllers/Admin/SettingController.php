@@ -13,6 +13,7 @@ class SettingController extends Controller
     {
         $groups = [
             'general'  => 'General Information',
+            'seo'      => 'SEO & Meta',
             'hero'     => 'Hero Section (Home Page)',
             'contact'  => 'Contact Information',
             'social'   => 'Social Media Links',

@@ -28,6 +28,10 @@ class AppServiceProvider extends ServiceProvider
                 public function __get($key) {
                     return Setting::val($key, app()->getLocale());
                 }
+                public function __isset($key) {
+                    $v = Setting::val($key, app()->getLocale());
+                    return $v !== null && $v !== '';
+                }
             });
 
             // Share active services for sidebar / footer
